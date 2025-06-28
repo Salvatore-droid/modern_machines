@@ -1,16 +1,24 @@
 # modern_machines
 
-A new Flutter project.
+Modern machines is a prototype sort of project built with the aim of achieving the control of machines remotely via the app.
+It uses flutter framework for the development of the UI.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Here is how to get started in cloning and running the project successfully.
 
-A few resources to get you started if this is your first Flutter project:
+            git clone https://github.com/Salvatore-droid/modern_machines
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+After cloning the project successfully. Open with vscode or android studio.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+            cd modern_machines
+
+Clean and download dependencies.
+
+            flutter clean
+
+            flutter pub get
+
+            flutter run
+
+
