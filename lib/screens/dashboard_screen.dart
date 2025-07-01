@@ -39,7 +39,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         ],
       ),
-      drawer: CustomNavigationDrawer(), // Remove const here
+      drawer: CustomNavigationDrawer(),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const [

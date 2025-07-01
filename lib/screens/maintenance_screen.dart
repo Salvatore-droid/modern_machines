@@ -90,44 +90,44 @@ class _MaintenanceScreenState extends State<MaintenanceScreen> {
   }
 
   Widget _buildPredictiveInsights() {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: const Color(0xFF252525),
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-      // child: Column(
-      //   crossAxisAlignment: CrossAxisAlignment.start,
-      //   children: [
-      //     const Text(
-      //       'AI Recommendations',
-      //       style: TextStyle(
-      //         fontWeight: FontWeight.bold,
-      //         color: Colors.white70
-      //       ),
-      //     ),
-      //     const SizedBox(height: 8),
-      //     _buildRecommendationItem('Schedule oil change before next Thursday'),
-      //     _buildRecommendationItem('Check hydraulic pressure sensors'),
-      //     _buildRecommendationItem('Rotate tires in next 200km'),
-      //     const SizedBox(height: 8),
-      //     SizedBox(
-      //       width: double.infinity,
-      //       child: ElevatedButton(
-      //         style: ElevatedButton.styleFrom(
-      //           backgroundColor: Colors.blueAccent,
-      //           shape: RoundedRectangleBorder(
-      //             borderRadius: BorderRadius.circular(8),
-      //           ),
-      //         ),
-      //         onPressed: () {},
-      //         child: const Text('Schedule Maintenance'),
-      //       ),
-      //     ),
-      //   ],
-      // ),
+  return Container(
+    padding: const EdgeInsets.all(16),
+    decoration: BoxDecoration(
+      color: const Color(0xFF252525),
+      borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
     ),
-    );
-  }
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'AI Recommendations',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white70
+          ),
+        ),
+        const SizedBox(height: 8),
+        _buildRecommendationItem('Schedule oil change before next Thursday'),
+        _buildRecommendationItem('Check hydraulic pressure sensors'),
+        _buildRecommendationItem('Rotate tires in next 200km'),
+        const SizedBox(height: 8),
+        SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueAccent,  // Fixed typo here
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+            onPressed: () {},
+            child: const Text('Schedule Maintenance'),
+          ),
+        ),
+      ],
+    ),
+  );
+}
 
   Widget _buildRecommendationItem(String text) {
     return Padding(

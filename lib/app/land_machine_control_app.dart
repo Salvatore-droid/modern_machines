@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/login_screen.dart'; // Add this import
 import '../screens/dashboard_screen.dart';
 
 class LandMachineControlApp extends StatelessWidget {
@@ -20,7 +21,13 @@ class LandMachineControlApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const DashboardScreen(),
+      // Set LoginScreen as the initial screen
+      home: const LoginScreen(),
+      // Define named routes
+      routes: {
+        '/dashboard': (context) => const DashboardScreen(),
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }

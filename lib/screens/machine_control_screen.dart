@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'maintenance_screen.dart';
+import 'systems_diagnostics_screen.dart';
 
 class MachineControlScreen extends StatefulWidget {
   final String machineName;
@@ -88,7 +89,7 @@ class _MachineControlScreenState extends State<MachineControlScreen> {
                 color: Colors.blueAccent.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.agriculture, size: 32, color: Colors.blueAccent),
+              child: const Icon(Icons.directions_car_filled, size: 32, color: Colors.blueAccent),
             ),
             const SizedBox(width: 16),
             
@@ -310,7 +311,17 @@ class _MachineControlScreenState extends State<MachineControlScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MaintenanceScreen(),
+                    builder: (context) =>  MaintenanceScreen(),
+                  ),
+                );
+              }
+              if (value == 'diagnostics') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SystemsDiagnosticsScreen(
+                      vehicleName: widget.machineName,
+                    ),
                   ),
                 );
               }
@@ -318,13 +329,26 @@ class _MachineControlScreenState extends State<MachineControlScreen> {
             itemBuilder: (BuildContext context) => [
               const PopupMenuItem<String>(
                 value: 'predictive',
-                child: Text('Predictive Maintenance'),
+                child: ListTile(
+                  leading: Icon(Icons.analytics, color: Colors.blueAccent),
+                  title: Text('Predictive Maintenance'),
+                  subtitle: Text('View component health status'),
+                ),
               ),
               const PopupMenuItem<String>(
                 value: 'diagnostics',
-                child: Text('System Diagnostics'),
+                child: ListTile(
+                  leading: Icon(Icons.directions_car, color: Colors.amber),
+                  title: Text('System Diagnostics'),
+                  subtitle: Text('Run full vehicle scan'),
+                ),
               ),
             ],
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            elevation: 8,
+            color: const Color(0xFF252525),
           ),
         ),
       ],
