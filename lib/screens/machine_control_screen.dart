@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'maintenance_screen.dart';
 
 class MachineControlScreen extends StatefulWidget {
   final String machineName;
@@ -302,9 +303,28 @@ class _MachineControlScreenState extends State<MachineControlScreen> {
             'Run system diagnostics',
             style: TextStyle(color: Colors.white54),
           ),
-          trailing: IconButton(
-            icon: const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.white70),
-            onPressed: () {},
+          trailing: PopupMenuButton<String>(
+            icon: const Icon(Icons.arrow_drop_down, color: Colors.white70),
+            onSelected: (value) {
+              if (value == 'predictive') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MaintenanceScreen(),
+                  ),
+                );
+              }
+            },
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem<String>(
+                value: 'predictive',
+                child: Text('Predictive Maintenance'),
+              ),
+              const PopupMenuItem<String>(
+                value: 'diagnostics',
+                child: Text('System Diagnostics'),
+              ),
+            ],
           ),
         ),
       ],
