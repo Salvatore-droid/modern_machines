@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../components/car_control_card.dart';
 
+
 class CategoryCarsScreen extends StatelessWidget {
   final String category;
 
@@ -126,21 +127,21 @@ class CategoryCarsScreen extends StatelessWidget {
                       model: '911 Turbo S',
                       status: 'Active',
                       battery: 92,
-                      imagePath: 'assets/porsche.jpg',
+                      imagePath: 'assets/images/porsche.jpg',
                     ),
                     CarControlCard(
                       name: 'Tesla',
                       model: 'Model S Plaid',
                       status: 'Charging',
                       battery: 45,
-                      imagePath: 'assets/tesla.jpg',
+                      imagePath: 'assets/images/tesla.jpg',
                     ),
                     CarControlCard(
                       name: 'Range Rover',
                       model: 'Autobiography',
                       status: 'Idle',
                       battery: 78,
-                      imagePath: 'assets/range.jpg',
+                      imagePath: 'assets/images/range.jpg',
                     ),
                   ],
                 ),

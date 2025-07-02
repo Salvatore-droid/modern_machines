@@ -11,7 +11,7 @@ class _AddMachineScreenState extends State<AddMachineScreen> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _serialController = TextEditingController();
-  String _machineType = 'Tractor';
+  String _machineType = 'Luxury/Sedan';
   String _connectionType = 'WiFi';
   int _batteryLevel = 100;
   bool _enableAutoUpdates = true;
@@ -84,7 +84,7 @@ class _AddMachineScreenState extends State<AddMachineScreen> {
                   controller: _nameController,
                   label: 'Machine Name',
                   hint: 'e.g. Field Tractor #5',
-                  icon: Icons.agriculture,
+                  icon: Icons.directions_car,
                   validator: (value) => value!.isEmpty ? 'Required' : null,
                 ),
                 const SizedBox(height: 16),
@@ -92,7 +92,7 @@ class _AddMachineScreenState extends State<AddMachineScreen> {
                 // Machine Type Dropdown
                 _buildDropdown(
                   value: _machineType,
-                  items: const ['Tractor', 'Harvester', 'Sprayer', 'Cultivator'],
+                  items: const ['Luxury/Sedan', 'Sports Cars', 'SUVs', 'Electric (EVs)'],
                   label: 'Machine Type',
                   icon: Icons.category,
                   onChanged: (value) => setState(() => _machineType = value!),

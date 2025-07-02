@@ -108,12 +108,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               );
             },
-            backgroundColor: Colors.blueAccent,
+            backgroundColor: const Color.fromARGB(151, 2, 77, 207),
             foregroundColor: Colors.white,
             elevation: 4,
             icon: const Icon(Icons.add),
             label: const Text(
-              'Add Machine',
+              'Add machine',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
